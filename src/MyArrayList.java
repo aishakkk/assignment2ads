@@ -1,7 +1,10 @@
 public class MyArrayList<T> implements MyList{
     private T[] arr;
     private int size;
-
+    public MyArrayList() {
+        this.arr = (T[]) new Object[5];
+        this.size = 5;
+    }
     @Override
     public int size() {
         return size;
