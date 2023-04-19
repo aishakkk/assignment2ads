@@ -5,6 +5,14 @@ public class MyArrayList<T> implements MyList{
         this.arr = (T[]) new Object[5];
         this.size = 5;
     }
+
+    private void increaseLength() {
+        T[] newArr = (T[]) new Object[arr.length*2];
+        for (int i = 0; i < arr.length; i++) {
+            newArr[i] = arr[i];
+        }
+    }
+
     @Override
     public int size() {
         return size;
