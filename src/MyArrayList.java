@@ -6,7 +6,7 @@ public class MyArrayList<T> implements MyList{
      */
     public MyArrayList() {
         this.arr = (T[]) new Object[5];
-        this.size = 5;
+        this.size = 0;
     }
     /**
      * @function display - function print elements of array in console
