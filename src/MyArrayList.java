@@ -66,4 +66,10 @@ public class MyArrayList<T> implements MyList{
     public void sort() {
 
     }
+
+    public void checkIndex(int index){
+        if(index < 0 || index>=size){
+            throw new IndexOutOfBoundsException();
+        }
+    }
 }
