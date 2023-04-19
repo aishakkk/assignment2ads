@@ -101,6 +101,25 @@ public class MyLinkedList<T> implements MyList{
 
     @Override
     public boolean remove(Object item) {
+        Node<T> newNode = new Node<T>((T) item, null, null);
+        if (head.val == newNode.val) {
+            head = head.next;
+            head.prev = null;
+            size--;
+            return true;
+        }
+        Node<T> ptr = head.next;
+        while (ptr != null) {
+            if (ptr.val == newNode.val) {
+                Node<T> temp = ptr.prev;
+                temp.next = ptr.next;
+                Node<T> temp2 = ptr.next;
+                temp2.prev = temp;
+                size--;
+                return true;
+            }
+            ptr = ptr.next;
+        }
         return false;
     }
 
