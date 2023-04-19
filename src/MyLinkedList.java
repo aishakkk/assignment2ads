@@ -23,6 +23,25 @@ public class MyLinkedList<T> implements MyList{
         return head == null;
     }
 
+    public void display() {
+        System.out.print("Linked List:  ");
+        if (size == 0) {
+            System.out.print("List is empty\n");
+            return;
+        }
+        if (head.next == null) {
+            System.out.println(head.val);
+            return;
+        }
+        System.out.print(head.val + " - ");
+        Node<T> ptr = head.next;
+        while (ptr.next != null) {
+            System.out.print(ptr.val + " - ");
+            ptr = ptr.next;
+        }
+        System.out.print(ptr.val + "\n");
+    }
+
     @Override
     public int size() {
         return size;
