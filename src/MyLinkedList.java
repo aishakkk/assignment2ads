@@ -19,6 +19,10 @@ public class MyLinkedList<T> implements MyList{
         size = 0;
     }
 
+    public boolean isEmpty() {
+        return head == null;
+    }
+
     @Override
     public int size() {
         return size;
