@@ -6,6 +6,8 @@ public class MyLinkedList<T> implements MyList{
         Node(T element, Node<T> next, Node<T> prev) {
         }
     }
+    Node<T> head;
+    Node<T> tail;
     @Override
     public int size() {
         return 0;
