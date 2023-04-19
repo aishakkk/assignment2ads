@@ -46,7 +46,16 @@ public class MyArrayList<T> implements MyList{
         if (size == arr.length) {
             increaseLength();
         }
-        arr[index] = (T) item;
+        T[] newArr = (T[]) new Object[arr.length];
+        for (int i = 0; i < index; i++) {
+            newArr[i] = arr[i];
+        }
+        for (int i = index; i < size; i++) {
+            newArr[i+1] = arr[i];
+        }
+        newArr[index] = (T) item;
+        arr = newArr;
+        size++;
     }
 
     @Override
