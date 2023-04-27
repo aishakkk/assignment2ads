@@ -283,4 +283,7 @@ public class MyLinkedList<T> implements MyList{
             throw new IndexOutOfBoundsException();
         }
     }
+    public void sublist {
+
+    }
 }
