@@ -173,4 +173,19 @@ public class MyArrayList<T> implements MyList{
             throw new IndexOutOfBoundsException();  // throw error if not
         }
     }
+    public void sortsrange(int monety,int ent){
+        for(int i = monety; i<=ent; i ++){
+            for (int j = monety; j < ent; j ++){
+                if((int) arr[j] > (int) arr[j + 1]){
+                    T temp = arr[j];
+                            arr[j] = arr[j+1];
+                            arr[j+1] = temp ;
+
+
+                }
+            }
+
+
+
+    }
 }
